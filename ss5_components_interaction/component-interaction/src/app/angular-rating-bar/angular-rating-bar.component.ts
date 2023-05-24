@@ -57,5 +57,4 @@ export class AngularRatingBarComponent implements OnInit, OnChanges {
     this.ratingUnits.forEach((item, idx) => item.active = idx < this.ratingValue);
   }
 
-
 }
