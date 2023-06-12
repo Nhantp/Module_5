@@ -1,0 +1,29 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "A",
+      "score": 7
+    },
+    {
+      "id": 2,
+      "name": "B",
+      "score": 7
+    },
+    {
+      "id": 3,
+      "name": "C",
+      "score": 7
+    },
+    {
+      "id": "4",
+      "name": "1",
+      "score": "1"
+    },
+    {
+      "id": 12,
+      "name": "3",
+      "score": "3"
+    }
+  ]
+}

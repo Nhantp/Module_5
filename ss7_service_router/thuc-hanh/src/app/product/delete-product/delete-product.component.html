@@ -1,1 +1,7 @@
-<p>delete-product works!</p>
+<h2>Xóa sản phẩm</h2>
+<p>Bạn có chắc chắn muốn xóa sản phẩm?</p>
+<p>Mã sản phẩm: {{ product.id }}</p>
+<p>Tên sản phẩm: {{ product.name }}</p>
+<p>Giá sản phẩm: {{ product.price }}</p>
+
+<button (click)="deleteProduct()">Xóa</button>

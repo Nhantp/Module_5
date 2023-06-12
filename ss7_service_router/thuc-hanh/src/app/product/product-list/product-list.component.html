@@ -1,15 +1,19 @@
 <h1>Danh sách sản phẩm</h1>
-<table>
+<table border="2">
   <tr>
     <td>STT</td>
     <td>Tên</td>
     <td>Giá</td>
+    <td>Loại</td>
     <td>Chức năng</td>
   </tr>
-  <tr *ngFor="let product of products; index as i">
+  <tr *ngFor="let product of products">
     <td>{{product.id}}</td>
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
-    <td><a [routerLink]="['/product', product.id]">Check</a></td>
+    <td>{{product.category}}</td>
+    <td><a [routerLink]="['/product', product.id]">Check ||  </a>
+      <a [routerLink]="['/product/edit', product.id]">Update ||  </a>
+      <a [routerLink]="['/product/delete', product?.id]">Delete</a></td>
   </tr>
 </table>

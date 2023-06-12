@@ -1,0 +1,13 @@
+<h1>Product Management</h1>
+
+<!-- Toggle button to display content -->
+<button (click)="toggleContent()">Product</button>
+
+<!-- Display content based on the toggle state -->
+<div *ngIf="showContent">
+  <a routerLink="/product/create">Create Product || </a>
+  <a routerLink="/product/list">Product List</a>
+</div>
+
+<!-- Router outlet to display the corresponding component -->
+<router-outlet></router-outlet>

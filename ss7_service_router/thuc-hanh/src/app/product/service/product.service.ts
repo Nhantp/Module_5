@@ -1,36 +1,45 @@
 import {Injectable} from '@angular/core';
 import {Product} from '../model/product';
+import {HttpClient} from '@angular/common/http';
+import {Category} from '../model/category';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
+  private API = 'http://localhost:3000/categories';
   products: Product[] = [{
     id: 1,
     name: 'IPhone 12',
     price: 2400000,
-    description: 'New'
+    description: 'New',
+    category: 'Phone'
   }, {
     id: 2,
-    name: 'IPhone 11',
+    name: 'TV 11',
     price: 1560000,
-    description: 'Like new'
+    description: 'Like new',
+    category: 'TV'
   }, {
     id: 3,
-    name: 'IPhone X',
-    price: 968000,
-    description: '97%'
-  }, {
-    id: 4,
-    name: 'IPhone 8',
-    price: 7540000,
-    description: '98%'
-  }, {
-    id: 5,
-    name: 'IPhone 11 Pro',
-    price: 1895000,
-    description: 'Like new'
+    name: 'TVA 11',
+    price: 1560000,
+    description: 'Like new',
+    category: 'TV'
   }];
+
+  categories: Category[] = [{
+    id: 1,
+    name: 'Phone',
+  }, {
+    id: 2,
+    name: 'TV',
+  }, {
+    id: 3,
+    name: 'AA',
+  }
+  ];
+
 
   getAll() {
     return this.products;
@@ -40,14 +49,35 @@ export class ProductService {
     this.products.push(product);
   }
 
-  getProducts(): Product[] {
-    return this.products;
-  }
-
   getProduct(id: number): Product | undefined {
     return this.products.find(product => product.id === id);
   }
 
-  constructor() {
+  updateById(id: number, updateProduct: Product): void {
+    const index = this.products.findIndex(product => product.id === id);
+    {
+      if (index !== -1) {
+        this.products[index] = updateProduct;
+      }
+    }
   }
+
+  deleteById(id: number): void {
+    const index = this.products.findIndex(product => product.id === id);
+    if (index !== -1) {
+      this.products.splice(index, 1);
+    }
+  }
+
+  getAllCategory() {
+    return this.categories;
+  }
+
+  constructor(private httpClient: HttpClient) {
+  }
+
+  // getAllCategories(): Observable<Category[]> {
+  //   return this.httpClient.get<Category[]>(this.API);
+  // }
+
 }
