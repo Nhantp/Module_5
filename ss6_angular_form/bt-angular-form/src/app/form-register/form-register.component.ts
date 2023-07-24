@@ -6,7 +6,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   templateUrl: './form-register.component.html',
   styleUrls: ['./form-register.component.css']
 })
-export class FormRegisterComponent implements OnInit {
+export class  FormRegisterComponent implements OnInit {
   // tslint:disable-next-line:no-output-on-prefix
   @Output() onCreate = new EventEmitter<FormRegisterComponent>();
   rfRegister: FormGroup;

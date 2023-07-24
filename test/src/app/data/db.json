@@ -1,0 +1,21 @@
+{
+  "khachHang": [
+    {
+      "id": 1,
+      "maKhachHang": 1,
+      "tenKhachHang": "Nhan"
+    }
+  ],
+  "soTietKiem": [
+    {
+      "maSoSo": 1,
+      "maKhachHang": 5,
+      "tenKhachHang": "5",
+      "ngayMoSo": "44",
+      "thoiGianBatDauGui": "05",
+      "kyHan": "5",
+      "soTienGui": "5",
+      "laiSuat": "5"
+    }
+  ]
+}

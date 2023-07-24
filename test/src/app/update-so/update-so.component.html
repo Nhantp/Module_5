@@ -1,0 +1,69 @@
+
+<h1 style="text-align: center; color: blue">Chỉnh sửa So Tiet Kiem</h1>
+<form [formGroup]="soTietKiemForm" (ngSubmit)="edit(id)">
+  <div class="container">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Mã So So</label>
+        <input type="text" class="form-control"  formControlName="MaSoSo" readonly>
+        <p class="text-danger" *ngIf="soTietKiemForm.controls.maKhachHang?.touched &&
+  soTietKiemForm.controls.maKhachHang?.errors?.required">Không được để trống</p>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Mã Khach Hang</label>
+        <input type="text" class="form-control"  formControlName="maKhachHang" readonly>
+        <p class="text-danger" *ngIf="soTietKiemForm.controls.maKhachHang?.touched &&
+  soTietKiemForm.controls.maKhachHang?.errors?.required">Không được để trống</p>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Tên Khach Hang</label>
+        <input type="text" class="form-control"  formControlName="tenKhachHang">
+        <p class="text-danger" *ngIf="soTietKiemForm.controls.tenKhachHang?.touched &&
+  soTietKiemForm.controls.tenKhachHang?.errors?.required">Không được để trống</p>
+        <p class="text-danger" *ngIf="soTietKiemForm.controls.tenKhachHang?.touched &&
+  soTietKiemForm.controls.tenKhachHang?.errors?.pattern">Tên không đươc chứa kí tự số</p>
+      </div>
+      maSoSo: number;
+      maKhachHang: string;
+      tenKhachHang: string;
+      ngayMoSo: string;
+      thoiGianBatDauGui: string;
+      kyHan: number;
+      soTienGui: number;
+      laiSuat: number;
+      <div class="form-group col-md-6">
+        <label>Ngày Mo So></label>
+        <input type="date" class="form-control"  formControlName="ngayNhapVien">
+        <p class="text-danger" *ngIf="soTietKiemForm.controls.ngayMoSo?.touched &&
+  soTietKiemForm.controls.ngayMoSo?.errors?.required">Không được để trống</p>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Thoi Gian Bat Dau Gui</label>
+        <input type="date" class="form-control"  formControlName="ngayRaVien">
+        <p class="text-danger" *ngIf="soTietKiemForm.controls.thoiGianBatDauGui?.touched &&
+  soTietKiemForm.controls.thoiGianBatDauGui?.errors?.required">Không được để trống</p>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Ky Han</label>
+        <input type="text" class="form-control"  formControlName="liDoNhapVien">
+        <p class="text-danger" *ngIf="soTietKiemForm.controls.kyHan?.touched &&
+  soTietKiemForm.controls.kyHan?.errors?.required">Không được để trống</p>
+      </div>
+      <div class="form-group col-md-6">
+        <label>So Tien Gui</label>
+        <input type="text" class="form-control"  formControlName="phuongPhapDieuTri">
+        <p class="text-danger" *ngIf="soTietKiemForm.controls.soTienGui?.touched &&
+  soTietKiemForm.controls.soTienGui?.errors?.required">Không được để trống</p>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Lai Suat</label>
+        <input type="text" class="form-control"  formControlName="bacSiDieuTri">
+        <p class="text-danger" *ngIf="soTietKiemForm.controls.laiSuat?.touched &&
+  soTietKiemForm.controls.laiSuat?.errors?.required">Không được để trống</p>
+      </div>
+    </div>
+    <button class="btn btn-primary" [disabled]="soTietKiemForm.invalid">Submit</button>
+    <a class="btn btn-outline-info" style="margin-left: 50px ;margin-top: 0px"  routerLink="/soTietKiem/list">Back</a>
+  </div>
+</form>
+
