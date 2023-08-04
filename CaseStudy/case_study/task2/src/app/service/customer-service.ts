@@ -13,7 +13,7 @@ export class CustomerService {
   }
 
   save(customer: Customer): Observable<Customer[]> {
-    return this.http.post<Customer[]>(this.API, customer);
+    return this.http.post< []>(this.API, customer);
   }
 
   getAll(): Observable<Customer[]> {

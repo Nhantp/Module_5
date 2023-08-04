@@ -16,6 +16,7 @@ import {ListEmployeeComponent} from './list-employee/list-employee.component';
 import {ListContractComponent} from './list-contract/list-contract.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SectionComponent } from './section/section.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ListEmployeeComponent,
     ListContractComponent,
     NavbarComponent,
+    SectionComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,84 +1,27 @@
 {
   "customers": [
     {
-      "id": 1,
-      "name": "nhan",
-      "email": "n@gmail.com",
-      "cmndNumber": "12345",
-      "customerType": "111",
-      "dateOfBirthday": "1/1/2023",
-      "phoneNumber": "0913232",
-      "address": "aaa"
-    },
-    {
-      "id": 2,
-      "name": "",
-      "email": "",
-      "customerType": "",
-      "cmndNumber": 0,
-      "dateOfBirthday": "",
-      "phoneNumber": "",
-      "address": ""
-    },
-    {
-      "id": 3,
-      "name": "",
-      "email": "",
-      "customerType": "",
-      "cmndNumber": 0,
-      "dateOfBirthday": "",
-      "phoneNumber": "",
-      "address": ""
-    },
-    {
-      "id": 4,
-      "name": "",
-      "email": "",
-      "customerType": "",
-      "cmndNumber": 0,
-      "dateOfBirthday": "",
-      "phoneNumber": "",
-      "address": ""
-    },
-    {
-      "id": 5,
-      "name": "1",
-      "email": "1",
-      "customerType": "",
-      "cmndNumber": "01",
-      "dateOfBirthday": "1",
-      "phoneNumber": "1",
-      "address": "1"
-    },
-    {
-      "id": 6,
-      "name": "2",
-      "email": "2",
-      "customerType": "",
+      "id": "01",
+      "name": "aaa",
+      "email": "vbb",
+      "customerType": "diamond",
       "cmndNumber": "02",
-      "dateOfBirthday": "2",
-      "phoneNumber": "2",
-      "address": "2"
+      "dateOfBirthday": "3242",
+      "phoneNumber": "543",
+      "address": "ggd"
     },
     {
-      "id": 7,
-      "name": "5",
-      "email": "5",
-      "customerType": "",
-      "cmndNumber": "05",
-      "dateOfBirthday": "5",
-      "phoneNumber": "5",
-      "address": "5"
-    },
-    {
-      "id": 8,
-      "name": "9",
-      "email": "9",
-      "customerType": "gold",
-      "cmndNumber": "09",
-      "dateOfBirthday": "9",
-      "phoneNumber": "9",
-      "address": "9"
+      "id": 10,
+      "name": "91",
+      "email": "91",
+      "cmndNumber": "091",
+      "customerTypes": {
+        "id": 3,
+        "name": "diamond"
+      },
+      "dateOfBirthday": "19/01/2112",
+      "phoneNumber": "1912323123",
+      "address": "39"
     }
   ],
   "customerTypes": [
